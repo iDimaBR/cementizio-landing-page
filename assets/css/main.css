@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 
+.swiper-button-next {
+    color: #444444;
+}
+.swiper-button-prev {
+    color: #444444;
+}
+.swiper-pagination-bullet-active {
+    background-color: #444444;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -65,18 +75,21 @@ html, body {
 
 .banner-discount{
 	/* Auto layout */
-    text-align: center;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 10px;
-    gap: 43px;
-    position: absolute;
     width: 100%;
     left: 0px;
     top: 0px;
     color: white;
     background-color: #004ADB;
 	font-size: 21px;
+
+    margin: 0;
+    position: absolute;
+    top: 1em;
+    text-align: center;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .first-section {
@@ -154,6 +167,7 @@ html, body {
 .price-h1 {
 	font-size: 4em;
 	font-weight: 800;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
 }
 
 .swiper {
@@ -329,12 +343,13 @@ html, body {
 }
 
 .show-offers h2 {
+    margin-top: 1.2em;
     margin-bottom: 1.2em;
     text-align: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
+    font-size:2.3vw;
     line-height: 34px;
     color: #000000;
 }
@@ -346,14 +361,19 @@ html, body {
 	justify-content: space-evenly;
 }
 
+.product-list-slide {
+    margin-left:3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .product-offer {
     padding: 2em;
     width: 248px;
     background-color: #FFF;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-    margin-right: 2em;
-    margin-bottom: 3em;
 }
 
 .product-offer h3 {
@@ -575,8 +595,56 @@ small .button-text{
     font-size: 150px;
   }
   
+  .footer{
+    background-color: #F5F5F5;
+  }
+
+  .container-footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100% auto;
+    background-color: #F5F5F5;
+  }
+
+  .item-footer{
+    margin-top: 3em;
+    margin-left: 70px;
+    background-color: #F5F5F5;
+  }
+
+  .item-footer p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 2em;
+  }
+
+  .item-footer h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 0.3em;
+
+  }
+
+  .text-footer{
+    text-align: center;
+    margin-top: 40px;
+    background-color: #F5F5F5;
+    margin-bottom: 6em;
+  }
+
+  .mobile {
+    display: none;
+  }
+
   @media only screen and (min-width: 1100px) {
-  
+
     #slider-container #slider .slide {
       width: calc(2.5% - 20px);
     }
@@ -584,7 +652,11 @@ small .button-text{
   }
   
   @media only screen and (max-width: 1100px) {
-  
+
+    #img-footer{
+        margin-left: -35px ;
+      }
+
     #slider-container #slider .slide {
       width: calc(3.3333333% - 20px);
     }
@@ -605,6 +677,114 @@ small .button-text{
       width: calc(10% - 20px);
     }
   
+  }
+
+  .product-offer {
+    margin-left:4.7em;
+  }
+
+  .swiper {
+    margin: 4em;
+    width: 66em;
+    height: 24em;
+  }
+  .swiper-slide {
+    width: 40vw;
+    height: calc((100% - 30px) / 2);
+  }
+
+  /* MOBILE RESPONSIVE CONTROL */
+  @media only screen and (max-width: 600px) {
+
+    .mobile {
+        display: unset;
+    }
+
+    .button-section a {
+        margin-top: 15em;
+    }
+    .button-section #image-subtitle {
+        position: absolute;
+        margin-top: 13em;
+        margin-left: -2.6em;
+    }
+    .announcement-last-chance h2 {
+        margin-top: 3em;
+    }
+    .button-section {
+        text-align: right;
+    }
+    .price-h1 {
+        margin-top: 1.7em;
+        margin-left: -0.6em;
+        position: absolute;
+    }
+    .desktop {
+        display: none;
+    }
+    .icon {
+        position: relative;
+    }
+
+    #sobre {
+        padding: 2.7em;
+    }
+
+    #ofertas h2 {
+        margin: 2em;
+        width: 320px;
+        font-size: 24px;
+    }
+
+    .banner-offer img {
+        width: 100%;
+    }
+
+    .offer-buy {
+        margin-bottom: 0em;
+    }
+    
+    .offer-buy .detail-text {
+        margin-top: -1.2em;
+        margin-left: 6em;
+    }
+
+    .offer-button{
+        font-size: 18px;
+        padding: 10px 35px;
+        width: 326px;
+        height: auto;
+    }
+
+    .offer-button span {
+        display: none;
+    }
+
+    .offer-button::after {
+        content: "FAÇA UM ORÇAMENTO"
+    }
+
+    .back-button {
+        display: none;
+    }
+
+    .container-footer #img-foo {
+        margin-left: -2em;
+        margin-top: 1em;
+    }
+
+    .item-footer {
+        margin-left: 4em;
+    }
+
+    .item-footer h1 {
+        margin-bottom: 0.2em;
+    }
+
+    .item-footer p {
+        margin-bottom: 2em;
+    }
+
   }
 
 

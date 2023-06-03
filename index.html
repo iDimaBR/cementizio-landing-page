@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title>Cementizio</title>
 </head>
 
 <body>
     <header id="inicio" class="banner-discount">
-        <p>Desconto de <span class="bold">10%</span> para pagamentos <span class="bold">à vist</span> via PIX</p>
+        Desconto de <span class="bold">10%</span> para pagamentos <span class="bold">à vista</span> via PIX
     </header>
 
     <section class="first-section">
@@ -27,12 +27,12 @@
     </section>
 
     <section class="announcement-last-chance">
-        <h2>Não esquenta, é antiderrapante, de fácil limpeza e com <span class="color-blue">preço de fábrica.</span><img class="icon" src="./assets//img/icons/promotions_1.png"></h2>
+        <h2>Não esquenta, é antiderrapante, de fácil limpeza e com <span class="color-blue">preço de fábrica.</span><img class="icon mobile" src="./assets//img/icons/promotions_1.png"></h2>
         <p><span class="color-blue underline">ÚLTIMA CHANCE!</span> Aproveite a oportunidade e adquira agora mesmo as melhores
             bordas direto da fábrica.</p>
     </section>
 
-    <section class="info-container">
+    <section class="info-container desktop">
         <div class="item-container" id="product1">
         </div>
         <div class="item-container" id="product2">
@@ -48,6 +48,23 @@
             <h1>Tenha uma área externa <span class="color-blue">irresistível</span> hoje mesmo.</h1>
         </div>
     </section>
+    <section class="info-container mobile">
+        <div class="item-container" id="product1">
+        </div>
+        <div class="item-container" id="product2">
+        </div>
+        <div class="item-container" id="sobre">
+            <p>Nós somos a empresa ideal para <span class="bold">você</span>. Somos <span class="bold">líder no mercado</span> de bordas atérmicas e cimentícias para
+                piscinas.
+                <br>
+                Se você está em busca de uma solução segura, durável, elegante e funcional para transformar sua piscina
+                em um verdadeiro oásis, você veio ao <span class="bold">lugar certo</span>.
+            </p>
+            <h1>Tenha uma área externa <span class="color-blue">irresistível</span> hoje mesmo.</h1>
+
+            <img src="./assets/img/info-logo.png">
+        </div>
+    </section>
 
     <div class="align-container-carrossel">
         <div class="paragraph-section">
@@ -55,52 +72,70 @@
         </div>
 
         <div class="container-carrossel">
-            <div class="item-carrossel">
-                <div class="icon-section">
-                    <img class="icon" src="./assets/img/icons/security.png">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="item-carrossel">
+                        <div class="icon-section">
+                            <img class="icon" src="./assets/img/icons/security.png">
+                        </div>
+                        <h3>Segurança</h3><br>
+                        <p>Nossas bordas são projetadas para fornecer uma superfície antiderrapante, reduzindo o risco de
+                            acidentes
+                            e
+                            garantindo tranquilidade para você e sua família.
+                        </p>
+                    </div>
                 </div>
-                <h3>Segurança</h3><br>
-                <p>Nossas bordas são projetadas para fornecer uma superfície antiderrapante, reduzindo o risco de
-                    acidentes
-                    e
-                    garantindo tranquilidade para você e sua família.
-                </p>
-            </div>
-            <div class="item-carrossel">
-                <div class="icon-section">
-                    <img class="icon" src="./assets/img/icons/temperature.png">
+                <div class="swiper-slide">
+                    <div class="item-carrossel">
+                        <div class="icon-section">
+                            <img class="icon" src="./assets/img/icons/temperature.png">
+                        </div>
+                        <h3>Atérmicas</h3><br>
+                        <p>Elas possuem propriedades isolantes que ajudam a manter a temperatura da superfície mais agradável ao
+                            toque, evitando queimaduras nos dias mais quentes.
+                        </p>
+                    </div>
                 </div>
-                <h3>Atérmicas</h3><br>
-                <p>Elas possuem propriedades isolantes que ajudam a manter a temperatura da superfície mais agradável ao
-                    toque, evitando queimaduras nos dias mais quentes.
-                </p>
-            </div>
-            <div class="item-carrossel">
-                <div class="icon-section">
-                    <img class="icon" src="./assets/img/icons/clock-circular-outline_1.png">
+                <div class="swiper-slide">
+                    <div class="item-carrossel">
+                        <div class="icon-section">
+                            <img class="icon" src="./assets/img/icons/clock-circular-outline_1.png">
+                        </div>
+                        <h3>Durabilidade</h3><br>
+                        <p>Fabricadas com materiais de alta qualidade, resistente a raios UV e desgaste natural, nossa borda irá
+                            resistir ao teste do tempo e manter seu visual impecável por muitos anos.
+                        </p>
+                    </div>
                 </div>
-                <h3>Durabilidade</h3><br>
-                <p>Fabricadas com materiais de alta qualidade, resistente a raios UV e desgaste natural, nossa borda irá
-                    resistir ao teste do tempo e manter seu visual impecável por muitos anos.
-                </p>
-            </div>
-            <div class="item-carrossel">
-                <div class="icon-section">
-                    <img class="icon" src="./assets/img/icons/brush_1.png">
+                <div class="swiper-slide">
+                    <div class="item-carrossel">
+                        <div class="icon-section">
+                            <img class="icon" src="./assets/img/icons/brush_1.png">
+                        </div>
+                        <h3>Fácil Limpeza</h3><br>
+                        <p>No dia a dia, basta lavar com água,  sabão neutro ou em pó (pode esfregar com vassoura de pelo) e vap ou mangueira. Fácil e rápido de manter a borda sempre limpa e bonita.
+                        </p>
+                    </div>
                 </div>
-                <h3>Fácil Limpeza</h3><br>
-                <p>No dia a dia, basta lavar com água,  sabão neutro ou em pó (pode esfregar com vassoura de pelo) e vap ou mangueira. Fácil e rápido de manter a borda sempre limpa e bonita.
-                </p>
-            </div>
-            <div class="item-carrossel">
-                <div class="icon-section">
-                    <img class="icon" src="./assets/img/icons/mirror_1.png">
+                <div class="swiper-slide">
+                    <div class="item-carrossel">
+                        <div class="icon-section">
+                            <img class="icon" src="./assets/img/icons/mirror_1.png">
+                        </div>
+                        <h3>Beleza e Estilo</h3><br>
+                        <p>Nossas bordas são projetadas para adicionar um toque de sofisticação ao ambiente. 
+                            Você pode escolher a opção perfeita para complementar o estilo da sua área externa.
+                        </p>
+                    </div>
                 </div>
-                <h3>Beleza e Estilo</h3><br>
-                <p>Nossas bordas são projetadas para adicionar um toque de sofisticação ao ambiente. 
-                    Você pode escolher a opção perfeita para complementar o estilo da sua área externa.
-                </p>
             </div>
+
+             <!-- If we need pagination -->
+             <div class="swiper-pagination"></div>
         </div>
     </div>
 
@@ -124,28 +159,119 @@
         <div class="banner-offer">
             <img src="./assets/img/piuma d'Oro 1 2.png">
         </div>
-        <div class="offer-carrossel">
-            <div class="product-offer">
-                <div class="image">
-                    <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+
+                <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
                 </div>
-                <h3>BORDA RETA</h3>
-                <p>peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)</p>
             </div>
-            <div class="product-offer">
-                <div class="image">
-                    <img src="./assets/img/PIUMA BRANCA FINAL 2.png">
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
                 </div>
-                <h3>BORDA RETA</h3>
-                <p>peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)</p>
             </div>
-            <div class="product-offer">
-                <div class="image">
-                    <img src="./assets/img/PIUMA BRANCA FINAL 3.png">
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
                 </div>
-                <h3>BORDA RETA</h3>
-                <p>peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)</p>
             </div>
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-offer">
+                    <div class="image">
+                        <img src="./assets/img/PIUMA BRANCA FINAL 1.png">
+                    </div>
+                    <h3>BORDA RETA</h3>
+                    <p>
+                        peito de pombo, 40X20X2cmbranco (atérmica e antiderrapante)
+                    </p>
+                </div>
+            </div>
+            
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
         <div class="offer-buy">
@@ -153,10 +279,10 @@
                 <p class="detail-text">CADA PEÇA POR:&nbsp;</p>
                 <p class="price-text">ou R$34,90 <p class="discount-text">-10%</p></p>
                 <p class="price">R$ 31,41</p>
-                <p class="price-pix">À vista no PIX 10%</p>
+                <p class="price-pix">À vista no PIX</p>
             </div>
             <div class="button-group">
-                <a href="" class="offer-button">FAÇA AGORA UM ORÇAMENTO</a>
+                <a href="" class="offer-button"><span>FAÇA AGORA UM ORÇAMENTO</span></a>
                 <small class="button-text">Solite um orçamento sem compromisso.</small>
             </div>
 
@@ -167,10 +293,42 @@
     </section>
 
 
-    <footer>
 
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="item-footer" id="img-foo"><img src="assets/img/info-logo.png"></div>
+
+            <div class="item-footer">
+                <h1><img style="width: 25px; height: 25px;" src="assets/img/icons/map.png"> Nossa localização</h1>
+                <p>Rua Antônia de Oliveira Costa, N°48 Cotia - SP</p>
+                <h1><img style="width: 25px; height: 25px;" src="assets/img/icons/telefone.png"> Contato</h1>
+                <p>(11) 98679-7724<br>(11) 98679-7722</p>
+            </div>
+
+            <div class="item-footer">
+                <h1><img style="width: 25px; height: 25px;" src="assets/img/icons/clock.png"> Horário de atendimento</h1>
+                <p>
+                    Segunda à Sexta de 9h às 17h.<br>
+                    Sábados das 9h às 13h.
+                </p>
+
+                <h1><img style="width: 25px; height: 25px;" src="assets/img/icons/help.png"> SAC</h1>
+                <p>sac@cementizio.com.br</p>
+            </div>
+
+            <div class="item-footer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.1092519914653!2d-46.826488811865076!3d-23.588655299037136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfaab33abbb75d%3A0x6af035d8af9172e5!2sR.%20Ant%C3%B4nio%20Oliveira%20Costa%2C%2048%20-%20Granja%20Viana%2C%20Cotia%20-%20SP%2C%2006709-302!5e0!3m2!1spt-BR!2sbr!4v1672943500999!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div><!--container-footer-->
+
+        <div class="text-footer">
+            <p style="font-size: 16px;" class="bold">© 2023 | Cementizio - Todos os direitos reservados</p>
+            <p style="font-size: 10px;">ícones por: flavicon & freepik</p>
+        </div><!--text-footer-->
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./assets/js/slider.js"></script>
 </body>
 
 </html>

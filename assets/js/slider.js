@@ -2,7 +2,9 @@ let slidesPerView = [1.5, 2.5, 3.5];
 
 const swiper1 = new Swiper('.swiper', {
   // Optional parameters
-  slidesPerView: slidesPerView[0],
+  slidesPerView: 1,
+  centeredSlides: false,
+  slidesPerGroupSkip: 1,
   direction: 'horizontal',
   spaceBetween: -400,
 
@@ -20,11 +22,18 @@ const swiper1 = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    768: {
-      slidesPerView: slidesPerView[1]
+    0: {
+      slidesPerView: 1
     },
-    1200: {
-      slidesPerView: slidesPerView[2]
+    520: {
+      slidesPerView: 2
+    },
+    769: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    950: {
+      slidesPerView: 3
     }
   }
 });

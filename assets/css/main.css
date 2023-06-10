@@ -241,7 +241,6 @@ html, body {
 	align-items: center;
 	width: 100% auto;
 	height: 100%;
-	max-height: 700px;
     background-color: #F5F5F5;
     border-bottom: 1px solid #004ADB;
     border-top: 1px solid #004ADB;
@@ -404,6 +403,9 @@ html, body {
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+.offer-button::after {
+    content: "";
 }
 
 .back-button {
@@ -641,10 +643,69 @@ small .button-text{
     font-weight: bold;
 }
 
+.offer-button-text1::after {
+    content: "FAÇA AGORA UM ORÇAMENTO"
+}
+
+.offer-button-text2::after {
+    content: "Eu quero essa oferta"
+}
+
+/* CELULAR */
 @media screen and (max-width: 1200px) {
-		#product1 , #product2{
-			display: none;
-		}
+    #product1 , #product2{
+        display: none;
+    }
+}
+@media screen and (max-width: 950px) {
+    .comment-container {
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+    .announcement-offer .offer-container {
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+        .offer-comment {
+            margin-bottom: 2em;
+            margin-left: 0em;
+        }
+        .get-offer-item .older-price {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            margin-left: 0.5em;
+        }
+
+        .offer-container .offer-item .get-offer-item .discount {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            margin-left: 7em;
+        }
+
+        .offer-container .offer-item .get-offer-item .price {
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 77px;
+        }
+
+        .offer-container .offer-item .get-offer-item .text-unity{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            margin-left: 8em;
+            margin-top: 1em;
+        }
+
+        .offer-container .offer-item .title{
+            margin-left: 2em;
+        }
+
+        .container-footer {
+            padding: 0em 2em 0em 0em;
+            margin-left: -0.5em;
+        }
 }
 
 /* ================================================================= */
@@ -799,7 +860,18 @@ small .button-text{
     height: calc((100% - 30px) / 2);
   }
 
+  
   /* MOBILE RESPONSIVE CONTROL */
+
+  @media only screen and (min-width: 400px) {
+    .price-h1 {
+        margin-left: -0.6em;
+    }
+    .button-section #image-subtitle {
+        margin-left: -2.6em;
+    }
+  }
+  
   @media only screen and (max-width: 600px) {
 
     .mobile {
@@ -812,7 +884,6 @@ small .button-text{
     .button-section #image-subtitle {
         position: absolute;
         margin-top: 13em;
-        margin-left: -2.6em;
     }
     .announcement-last-chance h2 {
         margin-top: 3em;
@@ -822,7 +893,6 @@ small .button-text{
     }
     .price-h1 {
         margin-top: 1.7em;
-        margin-left: -0.6em;
         position: absolute;
     }
     .desktop {
@@ -847,7 +917,7 @@ small .button-text{
     }
 
     .offer-buy {
-        margin-bottom: 0em;
+        margin-bottom: 1em;
     }
     
     .offer-buy .detail-text {
@@ -860,18 +930,6 @@ small .button-text{
         padding: 10px 35px;
         width: 326px;
         height: auto;
-    }
-
-    .offer-button span {
-        display: none;
-    }
-
-    .offer-button::after {
-        content: "FAÇA UM ORÇAMENTO"
-    }
-
-    .back-button {
-        display: none;
     }
 
     .container-footer #img-foo {

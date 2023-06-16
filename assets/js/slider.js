@@ -1,39 +1,59 @@
-let slidesPerView = [1.5, 2.5, 3.5];
-
-const swiper1 = new Swiper('.swiper', {
-  // Optional parameters
-  slidesPerView: 1,
-  centeredSlides: false,
-  slidesPerGroupSkip: 1,
-  direction: 'horizontal',
-  spaceBetween: -400,
-
-  // If we need pagination
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: false,
+  centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    dynamicMainBullets: true,
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
-
-  // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1
-    },
-    520: {
-      slidesPerView: 2
-    },
-    769: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    950: {
-      slidesPerView: 3
-    }
-  }
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      520: {
+          slidesPerView: 2,
+      },
+      950: {
+          slidesPerView: 3,
+      },
+  },
+});
+
+var swiper2 = new Swiper(".slide-content-product", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: false,
+  centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      630: {
+          slidesPerView: 2,
+      },
+      760: {
+          slidesPerView: 3,
+      },
+  },
 });

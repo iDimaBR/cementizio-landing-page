@@ -272,9 +272,6 @@
      padding-right: 3em;
      padding-left: 3em;
 }
- .offer-container .offer-item {
-     margin: 2em;
-}
  .offer-container .offer-item .title {
      font-weight: 400;
      font-size: 32px;
@@ -394,11 +391,6 @@
      justify-content: space-evenly;
      align-items: center;
      border-bottom: 1px solid #004ADB;
-}
- .banner-offer {
-     margin-top: 3em;
-     max-width: 1050px;
-     height: 591px;
 }
  .offer-buy {
      position: relative;
@@ -600,16 +592,29 @@
  .product-offer {
      margin-left:4.7em;
 }
+
+.banner-offer {
+    max-width: 1050px;
+    max-height: 591px;
+}
+.banner-offer img {
+   width: 100%;
+   height: auto;
+}
+
 /* CELULAR */
  @media screen and (max-width: 600px) {
      .first-section {
          background-image: url("../img/volare2.png");
     }
-     .banner-offer{
-         display: none;
+    #banner1 {
+        width: 100%;
+        content: url("../img/piuma\ d\'Oro\ 2_auto_x2\ 1.png");
     }
-     .banner-offer-mobile{
-         display: inline;
+
+    #banner2 {
+        width: 100%;
+        content: url("../img/Volare\ 2_auto_x2\ 2.png");
     }
 }
  @media screen and (max-width: 1200px) {
@@ -655,12 +660,22 @@
          margin-top: 1em;
     }
      .offer-container .offer-item .title{
-         margin-left: 2em;
+        margin-top: 2em;
+        margin-left: 2em;
+        margin-bottom: 2em;
     }
      .container-footer {
-         padding: 0em 2em 0em 0em;
-         margin-left: -0.5em;
+        padding: 0em 2em 0em 0em;
+        margin-left: -0.5em;
     }
+}
+
+.button-text {
+    margin-top:0.2em;
+}
+
+#ofertas .main-title {
+    padding: 1em;
 }
 
  @media only screen and (min-width: 1100px) {
@@ -728,9 +743,8 @@
          padding: 2.7em;
     }
      #ofertas h2 {
+        font-size: 100%;
          margin: 2em;
-         width: 320px;
-         font-size: 24px;
     }
      .banner-offer img {
          width: 100%;
@@ -767,6 +781,10 @@
     padding: 1em;
 }
 
+.offer-container {
+    margin-top:1em;
+}
+
 /* SWIPER PRODUCT */
 
 .slide-container-product{
@@ -775,7 +793,6 @@
     padding: 40px 0;
   }
   .slide-content-product{
-    margin: 0 91px;
     overflow: hidden;
     padding: 2em;
     background-color: #FFF;
@@ -785,6 +802,7 @@
     border-radius: 25px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
+    max-width: 250px;
   }
   .image-content-product, .card-content-product{
     display: flex;
@@ -814,14 +832,15 @@
   .name-product{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
     color: #000000;
     margin-bottom: 0.5em;
-    font-size: 95%;
     position: relative;
-    inline-size: 150px; 
     overflow: hidden;
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
   }
   .description-product{
     text-align: justify;
@@ -833,21 +852,21 @@
     font-size: 12px;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 600px) {
     .slide-content-product{
       margin: 0 30px;
     }
-    .swiper-navBtn{
-      display: none;
+    .slide-container-product {
+        padding: 0;
+    }
+    .swiper {
+        margin-top: 0;
     }
 }
 
 @media screen and (min-width: 422px) and (max-width: 1000px) {
     .slide-content-product{
-      margin: 0 112px;
-    }
-    .swiper-navBtn{
-      display: none;
+      margin: 0 67px;
     }
 }
 
@@ -863,6 +882,9 @@
     border-radius: 25px;
   }
   .card{
+    min-width: 330px;
+    min-height: 300px;
+    padding: 1.5em;
     border-radius: 25px;
     background-color: #F1F1F1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -872,34 +894,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 14px;
   }
   .image-content{
     position: relative;
     row-gap: 5px;
-    padding: 25px 0;
     max-height: 150px;
-    margin-bottom: 4em;
   }
   
   .card-image .card-img{
-    height: 100%;
     max-width: 51px;
     width: 100%;
     max-height: 51px;
     position: relative;
-    margin-top: 50px;
   }
   
   .name{
-    font-size: 18px;
+    line-height: 145%;
+    font-size: 24px;
     font-weight: 500;
-    color: #333;
+    color: #000;
   }
   .description{
-    font-size: 14px;
-    color: #707070;
-    text-align: center;
+    margin-top: 0.6em;
+    font-size: 18px;
+    line-height: 145%;
+    font-weight: 300;
+    color: #000;
+    text-align: left;
   }
   
   .swiper-navBtn{
@@ -928,6 +949,9 @@
   }
   
   @media screen and (max-width: 768px) {
+    .slide-content-product {
+        padding: 0;
+    }
     .slide-content{
       margin: 0 10px;
     }

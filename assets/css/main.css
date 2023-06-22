@@ -14,13 +14,20 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     font-family: 'Calibri';
+     font-family: inter;
      font-weight: 300;
 }
+
+@font-face {
+    font-family: Inter;
+    src: url('fonts/Inter_Regular.ttf') format('opentype');
+  }
+  
  html, body {
      scroll-behavior: smooth;
      height: 100%;
 }
+
 /* global div */
  .container {
      width: 100% auto;
@@ -62,24 +69,21 @@
      text-decoration-line: underline;
 }
  .banner-discount{
-    /* Auto layout */
-     padding: 10px;
+     padding: 14px;
      width: 100%;
-     left: 0px;
-     top: 0px;
      color: white;
      background-color: #004ADB;
      font-size: 21px;
-     margin: 0;
      position: absolute;
-     top: 1em;
+     top: 20px;
      text-align: center;
      left: 50%;
+     margin: 0;
      margin-right: -50%;
      transform: translate(-50%, -50%) 
 }
  .first-section {
-     background-image: url("../img/volare.png");
+     background-image: url("../img/desktop/banner.png");
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
@@ -88,15 +92,12 @@
      display: flex;
      justify-content: flex-end;
 }
- .banner-offer-mobile{
-     display: none;
-}
  .button-section {
      color: #fff;
      display: flex;
      flex-direction: column;
      text-align: center;
-     margin-right: 5em;
+     margin-right: 25em;
      margin-top: 8.2em;
 }
  .button-section a {
@@ -357,12 +358,12 @@
 }
  .back-button {
      padding: 10px 20px;
-     width: 169px;
      height: 38px;
      background: #A9A9A9;
      color: white;
      text-decoration: none;
      border-radius: 3px;
+     font-size: 100%;
 }
  .group-back-button {
      display: flex;
@@ -374,7 +375,8 @@
  .info-container{
      display: flex;
      flex-direction: row;
-     justify-content: space-evenly;
+     justify-content: center;
+     column-gap: 25px;
      align-items: center;
 }
  .item-container{
@@ -477,10 +479,10 @@
      color: #000000;
 }
  #product1{
-     background-image: url("../img/volare2.png");
+     background-image: url("../img/desktop/oferta-esquerda.png");
 }
  #product2{
-     background-image: url("../img/piuma_dOro_2_1.png");
+     background-image: url("../img/desktop/oferta-direita.png");
 }
  #sobre{
      display: flex;
@@ -596,6 +598,7 @@
 .banner-offer {
     max-width: 1050px;
     max-height: 591px;
+    position: relative;
 }
 .banner-offer img {
    width: 100%;
@@ -605,21 +608,35 @@
 /* CELULAR */
  @media screen and (max-width: 600px) {
      .first-section {
-         background-image: url("../img/volare2.png");
+         background-image: url("../img/mobile/banner.png");
     }
     #banner1 {
         width: 100%;
-        content: url("../img/piuma\ d\'Oro\ 2_auto_x2\ 1.png");
+        content: url("../img/mobile/oferta1-banner.png");
     }
 
     #banner2 {
         width: 100%;
-        content: url("../img/Volare\ 2_auto_x2\ 2.png");
+        content: url("../img/mobile/oferta2-banner.png");
     }
+
+    .swiper-button-next {
+        display: none;
+    }
+    .swiper-button-prev {
+        display: none;
+    }
+    
 }
  @media screen and (max-width: 1200px) {
      #product1 , #product2{
          display: none;
+    }
+}
+@media screen and (max-width: 450px) {
+    .banner-discount{
+        top: 30px;
+        padding: 10px;
     }
 }
  @media screen and (max-width: 950px) {
@@ -728,6 +745,8 @@
     }
      .button-section {
          text-align: right;
+         margin-right: 5em;
+        margin-top: 8.2em;
     }
      .price-h1 {
          margin-top: 1.7em;
@@ -741,6 +760,7 @@
     }
      #sobre {
          padding: 2.7em;
+         margin: 0 auto;
     }
      #ofertas h2 {
         font-size: 100%;
@@ -794,7 +814,6 @@
   }
   .slide-content-product{
     overflow: hidden;
-    padding: 2em;
     background-color: #FFF;
     border-radius: 9px;
   }
@@ -808,13 +827,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 29px 33px;
+    padding: 0px 33px 33px 33px;
   }
   .image-content-product{
     position: relative;
     row-gap: 5px;
     padding: 25px 0;
-    max-height: 150px;
+    max-height: 250px;
   }
   
   .card-image-product .card-img-product{
@@ -843,7 +862,7 @@
     line-height: 18px;
   }
   .description-product{
-    text-align: justify;
+    text-align: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;

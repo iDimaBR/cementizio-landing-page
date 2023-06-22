@@ -1,10 +1,7 @@
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
-  loop: false,
-  centerSlide: 'true',
-  fade: 'true',
-  grabCursor: 'true',
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -31,13 +28,11 @@ var swiper = new Swiper(".slide-content", {
 var swiper2 = new Swiper(".slide-content-product", {
   slidesPerView: 3,
   spaceBetween: 25,
-  loop: false,
-  centerSlide: 'true',
-  fade: 'true',
-  grabCursor: 'true',
+  mousewheel: true,
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: false,
     dynamicBullets: true,
   },
   navigation: {
@@ -45,15 +40,27 @@ var swiper2 = new Swiper(".slide-content-product", {
     prevEl: ".swiper-button-prev",
   },
 
+  on:{
+      activeIndexChange: function(index){
+        console.log(index);
+        if(index.activeIndex == 6){
+          this.slideTo(0, false);
+        }
+      },
+  },
+
   breakpoints:{
     0: {
       slidesPerView: 1,
+      spaceBetween: 8,
     },
     520: {
-        slidesPerView: 2,
+      slidesPerView: 2,
+      spaceBetween: 15,
     },
     950: {
-        slidesPerView: 3,
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
   },
 });
